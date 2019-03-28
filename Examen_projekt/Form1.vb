@@ -4,4 +4,6 @@
     'TestfraJakobPC
 
     'hej jakob....
+
+    'test2jako
 End Class
