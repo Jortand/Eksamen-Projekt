@@ -5,5 +5,5 @@
 
     'hej jakob....
 
-    'test2jako
+    'test2
 End Class
