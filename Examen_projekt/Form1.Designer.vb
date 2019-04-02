@@ -33,7 +33,7 @@ Partial Class Form1
         '
         'New_Window_opener
         '
-        Me.New_Window_opener.Location = New System.Drawing.Point(52, 117)
+        Me.New_Window_opener.Location = New System.Drawing.Point(52, 103)
         Me.New_Window_opener.Name = "New_Window_opener"
         Me.New_Window_opener.Size = New System.Drawing.Size(112, 58)
         Me.New_Window_opener.TabIndex = 1
@@ -42,7 +42,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(223, 117)
+        Me.Button1.Location = New System.Drawing.Point(223, 103)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(110, 58)
         Me.Button1.TabIndex = 2
