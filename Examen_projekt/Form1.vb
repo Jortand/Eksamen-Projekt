@@ -8,4 +8,5 @@
         Panel_start.Visible = False
 
     End Sub
+
 End Class
