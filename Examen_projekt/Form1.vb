@@ -7,18 +7,15 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Panel_tést.Visible = True
+        Panel_KraftArbejde1.Visible = True
         Panel_start.Visible = False
-    End Sub
-
-    Private Sub KrafterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KrafterToolStripMenuItem.Click
-        'TestForm.Show()
-        tal = InputBox("Indtast et tal")
-        resultat = Math.Sqrt(tal)
-        MsgBox("Kammeratroden af " & tal & " er: " & resultat)
     End Sub
 
     Private Sub Panel_start_Paint(sender As Object, e As PaintEventArgs) Handles Panel_start.Paint
 
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles KraftArbejdeToolStrip.Click
+        TestForm.Show()
     End Sub
 End Class
