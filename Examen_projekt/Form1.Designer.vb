@@ -28,10 +28,10 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.KrafterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel_tést = New System.Windows.Forms.Panel()
-        Me.Formel_Label = New System.Windows.Forms.Label()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EllæreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel_tést = New System.Windows.Forms.Panel()
+        Me.Formel_Label = New System.Windows.Forms.Label()
         Me.Panel_start.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel_tést.SuspendLayout()
@@ -39,7 +39,7 @@ Partial Class Form1
         '
         'New_Window_opener
         '
-        Me.New_Window_opener.Location = New System.Drawing.Point(24, 171)
+        Me.New_Window_opener.Location = New System.Drawing.Point(177, 128)
         Me.New_Window_opener.Margin = New System.Windows.Forms.Padding(4)
         Me.New_Window_opener.Name = "New_Window_opener"
         Me.New_Window_opener.Size = New System.Drawing.Size(149, 71)
@@ -87,8 +87,20 @@ Partial Class Form1
         'KrafterToolStripMenuItem
         '
         Me.KrafterToolStripMenuItem.Name = "KrafterToolStripMenuItem"
-        Me.KrafterToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.KrafterToolStripMenuItem.Size = New System.Drawing.Size(230, 26)
         Me.KrafterToolStripMenuItem.Text = "Krafter"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(230, 26)
+        Me.ToolStripMenuItem2.Text = "Harmonisk bevægelse"
+        '
+        'EllæreToolStripMenuItem
+        '
+        Me.EllæreToolStripMenuItem.Name = "EllæreToolStripMenuItem"
+        Me.EllæreToolStripMenuItem.Size = New System.Drawing.Size(62, 24)
+        Me.EllæreToolStripMenuItem.Text = "Ellære"
         '
         'Panel_tést
         '
@@ -109,18 +121,6 @@ Partial Class Form1
         Me.Formel_Label.Size = New System.Drawing.Size(64, 17)
         Me.Formel_Label.TabIndex = 0
         Me.Formel_Label.Text = "Formel :)"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(230, 26)
-        Me.ToolStripMenuItem2.Text = "Harmonisk bevægelse"
-        '
-        'EllæreToolStripMenuItem
-        '
-        Me.EllæreToolStripMenuItem.Name = "EllæreToolStripMenuItem"
-        Me.EllæreToolStripMenuItem.Size = New System.Drawing.Size(62, 24)
-        Me.EllæreToolStripMenuItem.Text = "Ellære"
         '
         'Form1
         '
