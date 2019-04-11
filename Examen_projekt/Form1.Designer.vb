@@ -27,18 +27,26 @@ Partial Class Form1
         Me.Panel_start = New System.Windows.Forms.Panel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.KraftArbejdeToolStrip = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EnergiVarmeToolStrip = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel_KraftArbejde1 = New System.Windows.Forms.Panel()
-        Me.FresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FresF1F2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FresMAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnergiVarmeToolStrip = New System.Windows.Forms.ToolStripMenuItem()
         Me.QCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel_KarftArbejde2 = New System.Windows.Forms.Panel()
-        Me.Panel_EnergiVarme = New System.Windows.Forms.Panel()
         Me.ElektricitetMagnatismeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OhmsLovToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel_KraftArbejde1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel_KarftArbejde2 = New System.Windows.Forms.Panel()
+        Me.Panel_EnergiVarme = New System.Windows.Forms.Panel()
         Me.Panel_ElektricitetMagnatisme = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel_start.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        Me.Panel_KraftArbejde1.SuspendLayout()
+        Me.Panel_KarftArbejde2.SuspendLayout()
+        Me.Panel_EnergiVarme.SuspendLayout()
+        Me.Panel_ElektricitetMagnatisme.SuspendLayout()
         Me.SuspendLayout()
         '
         'New_Window_opener
@@ -65,7 +73,7 @@ Partial Class Form1
         '
         Me.Panel_start.Controls.Add(Me.Button1)
         Me.Panel_start.Controls.Add(Me.New_Window_opener)
-        Me.Panel_start.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_start.Location = New System.Drawing.Point(0, 4)
         Me.Panel_start.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_start.Name = "Panel_start"
         Me.Panel_start.Size = New System.Drawing.Size(539, 364)
@@ -83,10 +91,22 @@ Partial Class Form1
         '
         'KraftArbejdeToolStrip
         '
-        Me.KraftArbejdeToolStrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FresToolStripMenuItem, Me.FresF1F2ToolStripMenuItem})
+        Me.KraftArbejdeToolStrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FresF1F2ToolStripMenuItem, Me.FresMAToolStripMenuItem})
         Me.KraftArbejdeToolStrip.Name = "KraftArbejdeToolStrip"
         Me.KraftArbejdeToolStrip.Size = New System.Drawing.Size(130, 24)
         Me.KraftArbejdeToolStrip.Text = "Kraft og arbejde"
+        '
+        'FresF1F2ToolStripMenuItem
+        '
+        Me.FresF1F2ToolStripMenuItem.Name = "FresF1F2ToolStripMenuItem"
+        Me.FresF1F2ToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.FresF1F2ToolStripMenuItem.Text = "Fres = F1 + F2"
+        '
+        'FresMAToolStripMenuItem
+        '
+        Me.FresMAToolStripMenuItem.Name = "FresMAToolStripMenuItem"
+        Me.FresMAToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.FresMAToolStripMenuItem.Text = "Fres = m * a"
         '
         'EnergiVarmeToolStrip
         '
@@ -95,50 +115,11 @@ Partial Class Form1
         Me.EnergiVarmeToolStrip.Size = New System.Drawing.Size(131, 24)
         Me.EnergiVarmeToolStrip.Text = "Energi og Varme"
         '
-        'Panel_KraftArbejde1
-        '
-        Me.Panel_KraftArbejde1.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel_KraftArbejde1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_KraftArbejde1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel_KraftArbejde1.Name = "Panel_KraftArbejde1"
-        Me.Panel_KraftArbejde1.Size = New System.Drawing.Size(539, 364)
-        Me.Panel_KraftArbejde1.TabIndex = 0
-        '
-        'FresToolStripMenuItem
-        '
-        Me.FresToolStripMenuItem.Name = "FresToolStripMenuItem"
-        Me.FresToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.FresToolStripMenuItem.Text = "Fres = m * a"
-        '
-        'FresF1F2ToolStripMenuItem
-        '
-        Me.FresF1F2ToolStripMenuItem.Name = "FresF1F2ToolStripMenuItem"
-        Me.FresF1F2ToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.FresF1F2ToolStripMenuItem.Text = "Fres = F1 + F2"
-        '
         'QCToolStripMenuItem
         '
         Me.QCToolStripMenuItem.Name = "QCToolStripMenuItem"
         Me.QCToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.QCToolStripMenuItem.Text = "Q = C * ∆T"
-        '
-        'Panel_KarftArbejde2
-        '
-        Me.Panel_KarftArbejde2.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel_KarftArbejde2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_KarftArbejde2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel_KarftArbejde2.Name = "Panel_KarftArbejde2"
-        Me.Panel_KarftArbejde2.Size = New System.Drawing.Size(539, 364)
-        Me.Panel_KarftArbejde2.TabIndex = 1
-        '
-        'Panel_EnergiVarme
-        '
-        Me.Panel_EnergiVarme.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel_EnergiVarme.Location = New System.Drawing.Point(0, -1)
-        Me.Panel_EnergiVarme.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel_EnergiVarme.Name = "Panel_EnergiVarme"
-        Me.Panel_EnergiVarme.Size = New System.Drawing.Size(539, 364)
-        Me.Panel_EnergiVarme.TabIndex = 4
         '
         'ElektricitetMagnatismeToolStripMenuItem
         '
@@ -153,14 +134,81 @@ Partial Class Form1
         Me.OhmsLovToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.OhmsLovToolStripMenuItem.Text = "U = R * I"
         '
+        'Panel_KraftArbejde1
+        '
+        Me.Panel_KraftArbejde1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel_KraftArbejde1.Controls.Add(Me.Label1)
+        Me.Panel_KraftArbejde1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_KraftArbejde1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel_KraftArbejde1.Name = "Panel_KraftArbejde1"
+        Me.Panel_KraftArbejde1.Size = New System.Drawing.Size(539, 364)
+        Me.Panel_KraftArbejde1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(198, 168)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(100, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Fres = F1 + F2"
+        '
+        'Panel_KarftArbejde2
+        '
+        Me.Panel_KarftArbejde2.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel_KarftArbejde2.Controls.Add(Me.Label2)
+        Me.Panel_KarftArbejde2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_KarftArbejde2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel_KarftArbejde2.Name = "Panel_KarftArbejde2"
+        Me.Panel_KarftArbejde2.Size = New System.Drawing.Size(539, 364)
+        Me.Panel_KarftArbejde2.TabIndex = 1
+        '
+        'Panel_EnergiVarme
+        '
+        Me.Panel_EnergiVarme.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel_EnergiVarme.Controls.Add(Me.Label3)
+        Me.Panel_EnergiVarme.Location = New System.Drawing.Point(0, -1)
+        Me.Panel_EnergiVarme.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel_EnergiVarme.Name = "Panel_EnergiVarme"
+        Me.Panel_EnergiVarme.Size = New System.Drawing.Size(539, 364)
+        Me.Panel_EnergiVarme.TabIndex = 4
+        '
         'Panel_ElektricitetMagnatisme
         '
         Me.Panel_ElektricitetMagnatisme.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel_ElektricitetMagnatisme.Controls.Add(Me.Label4)
         Me.Panel_ElektricitetMagnatisme.Location = New System.Drawing.Point(0, 0)
         Me.Panel_ElektricitetMagnatisme.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_ElektricitetMagnatisme.Name = "Panel_ElektricitetMagnatisme"
         Me.Panel_ElektricitetMagnatisme.Size = New System.Drawing.Size(539, 364)
         Me.Panel_ElektricitetMagnatisme.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(230, 168)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(84, 17)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Fres = m * a"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(223, 169)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(75, 17)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Q = C * ∆T"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(227, 168)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(60, 17)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "U = R * I"
         '
         'Form1
         '
@@ -180,6 +228,14 @@ Partial Class Form1
         Me.Panel_start.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.Panel_KraftArbejde1.ResumeLayout(False)
+        Me.Panel_KraftArbejde1.PerformLayout()
+        Me.Panel_KarftArbejde2.ResumeLayout(False)
+        Me.Panel_KarftArbejde2.PerformLayout()
+        Me.Panel_EnergiVarme.ResumeLayout(False)
+        Me.Panel_EnergiVarme.PerformLayout()
+        Me.Panel_ElektricitetMagnatisme.ResumeLayout(False)
+        Me.Panel_ElektricitetMagnatisme.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -191,7 +247,7 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents KraftArbejdeToolStrip As ToolStripMenuItem
     Friend WithEvents EnergiVarmeToolStrip As ToolStripMenuItem
-    Friend WithEvents FresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FresMAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FresF1F2ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QCToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel_KarftArbejde2 As Panel
@@ -199,4 +255,8 @@ Partial Class Form1
     Friend WithEvents ElektricitetMagnatismeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OhmsLovToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel_ElektricitetMagnatisme As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
