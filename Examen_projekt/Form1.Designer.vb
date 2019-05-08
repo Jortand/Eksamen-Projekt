@@ -32,9 +32,9 @@ Partial Class Form1
         Me.KraftArbejde1_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KraftArbejde2_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnergiVarmeToolStrip = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnergiVarme1_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ElektricitetMagnatismeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OhmsLovToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ElekticitetMagnatisme_ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel_KraftArbejde1 = New System.Windows.Forms.Panel()
         Me.KraftArbejde1_Button_Clear = New System.Windows.Forms.Button()
         Me.KraftArbejde1_Label_Fres = New System.Windows.Forms.Label()
@@ -46,25 +46,42 @@ Partial Class Form1
         Me.KraftArbejde1_Textbox_F2 = New System.Windows.Forms.TextBox()
         Me.KraftArbejde1_Textbox_F1 = New System.Windows.Forms.TextBox()
         Me.KraftArbejde1_Label_Formel = New System.Windows.Forms.Label()
-        Me.Panel_KarftArbejde2 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel_KraftArbejde2 = New System.Windows.Forms.Panel()
+        Me.KraftArbejde2_Button_Clear = New System.Windows.Forms.Button()
+        Me.KraftArbejde2_Label_Resultat = New System.Windows.Forms.Label()
+        Me.KraftArbejde2_Label_Fres = New System.Windows.Forms.Label()
+        Me.KraftArbejde2_Label_a = New System.Windows.Forms.Label()
+        Me.KraftArbejde2_Label_m = New System.Windows.Forms.Label()
+        Me.KraftArbejde2_Textbox_Fres = New System.Windows.Forms.TextBox()
+        Me.KraftArbejde2_Textbox_a = New System.Windows.Forms.TextBox()
+        Me.KraftArbejde2_Textbox_m = New System.Windows.Forms.TextBox()
+        Me.KraftArbejde2_Button_Beregn = New System.Windows.Forms.Button()
+        Me.KraftArbejde2_Label_Formel = New System.Windows.Forms.Label()
         Me.Panel_EnergiVarme = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.EnergiVarme1_Button_Clear = New System.Windows.Forms.Button()
+        Me.EnergiVarme1_Label_C = New System.Windows.Forms.Label()
+        Me.EnergiVarme1_Label_T = New System.Windows.Forms.Label()
+        Me.EnergiVarme1_Label_Q = New System.Windows.Forms.Label()
+        Me.EnergiVarme1_Textbox_Q = New System.Windows.Forms.TextBox()
+        Me.EnergiVarme1_Textbox_T = New System.Windows.Forms.TextBox()
+        Me.EnergiVarme1_Textbox_C = New System.Windows.Forms.TextBox()
+        Me.EnergiVarme1_Label_Resultat = New System.Windows.Forms.Label()
+        Me.EnergiVarme1_Button_Beregn = New System.Windows.Forms.Button()
+        Me.EnergiVarme1_Label_Formel = New System.Windows.Forms.Label()
         Me.Panel_ElektricitetMagnatisme = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.KraftArbejde1_ImageList = New System.Windows.Forms.ImageList(Me.components)
-        Me.KraftArbejde2_Button_Beregn = New System.Windows.Forms.Button()
         Me.Panel_start.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel_KraftArbejde1.SuspendLayout()
-        Me.Panel_KarftArbejde2.SuspendLayout()
+        Me.Panel_KraftArbejde2.SuspendLayout()
         Me.Panel_EnergiVarme.SuspendLayout()
         Me.Panel_ElektricitetMagnatisme.SuspendLayout()
         Me.SuspendLayout()
         '
         'New_Window_opener
         '
-        Me.New_Window_opener.Location = New System.Drawing.Point(408, 214)
+        Me.New_Window_opener.Location = New System.Drawing.Point(142, 302)
         Me.New_Window_opener.Margin = New System.Windows.Forms.Padding(4)
         Me.New_Window_opener.Name = "New_Window_opener"
         Me.New_Window_opener.Size = New System.Drawing.Size(149, 71)
@@ -124,29 +141,29 @@ Partial Class Form1
         '
         'EnergiVarmeToolStrip
         '
-        Me.EnergiVarmeToolStrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QCToolStripMenuItem})
+        Me.EnergiVarmeToolStrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnergiVarme1_ToolStripMenuItem})
         Me.EnergiVarmeToolStrip.Name = "EnergiVarmeToolStrip"
         Me.EnergiVarmeToolStrip.Size = New System.Drawing.Size(131, 24)
         Me.EnergiVarmeToolStrip.Text = "Energi og Varme"
         '
-        'QCToolStripMenuItem
+        'EnergiVarme1_ToolStripMenuItem
         '
-        Me.QCToolStripMenuItem.Name = "QCToolStripMenuItem"
-        Me.QCToolStripMenuItem.Size = New System.Drawing.Size(154, 26)
-        Me.QCToolStripMenuItem.Text = "Q = C * ∆T"
+        Me.EnergiVarme1_ToolStripMenuItem.Name = "EnergiVarme1_ToolStripMenuItem"
+        Me.EnergiVarme1_ToolStripMenuItem.Size = New System.Drawing.Size(154, 26)
+        Me.EnergiVarme1_ToolStripMenuItem.Text = "Q = C * ∆T"
         '
         'ElektricitetMagnatismeToolStripMenuItem
         '
-        Me.ElektricitetMagnatismeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OhmsLovToolStripMenuItem})
+        Me.ElektricitetMagnatismeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ElekticitetMagnatisme_ToolStripMenuItem})
         Me.ElektricitetMagnatismeToolStripMenuItem.Name = "ElektricitetMagnatismeToolStripMenuItem"
         Me.ElektricitetMagnatismeToolStripMenuItem.Size = New System.Drawing.Size(199, 24)
         Me.ElektricitetMagnatismeToolStripMenuItem.Text = "Elektricitet og Magnatisme"
         '
-        'OhmsLovToolStripMenuItem
+        'ElekticitetMagnatisme_ToolStripMenuItem
         '
-        Me.OhmsLovToolStripMenuItem.Name = "OhmsLovToolStripMenuItem"
-        Me.OhmsLovToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
-        Me.OhmsLovToolStripMenuItem.Text = "U = R * I"
+        Me.ElekticitetMagnatisme_ToolStripMenuItem.Name = "ElekticitetMagnatisme_ToolStripMenuItem"
+        Me.ElekticitetMagnatisme_ToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.ElekticitetMagnatisme_ToolStripMenuItem.Text = "U = R * I"
         '
         'Panel_KraftArbejde1
         '
@@ -254,44 +271,209 @@ Partial Class Form1
         Me.KraftArbejde1_Label_Formel.TabIndex = 0
         Me.KraftArbejde1_Label_Formel.Text = "F1 + F2 = Fres"
         '
-        'Panel_KarftArbejde2
+        'Panel_KraftArbejde2
         '
-        Me.Panel_KarftArbejde2.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel_KarftArbejde2.Controls.Add(Me.KraftArbejde2_Button_Beregn)
-        Me.Panel_KarftArbejde2.Controls.Add(Me.Label2)
-        Me.Panel_KarftArbejde2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_KarftArbejde2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel_KarftArbejde2.Name = "Panel_KarftArbejde2"
-        Me.Panel_KarftArbejde2.Size = New System.Drawing.Size(795, 500)
-        Me.Panel_KarftArbejde2.TabIndex = 1
+        Me.Panel_KraftArbejde2.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Button_Clear)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Label_Resultat)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Label_Fres)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Label_a)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Label_m)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Textbox_Fres)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Textbox_a)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Textbox_m)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Button_Beregn)
+        Me.Panel_KraftArbejde2.Controls.Add(Me.KraftArbejde2_Label_Formel)
+        Me.Panel_KraftArbejde2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_KraftArbejde2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel_KraftArbejde2.Name = "Panel_KraftArbejde2"
+        Me.Panel_KraftArbejde2.Size = New System.Drawing.Size(795, 500)
+        Me.Panel_KraftArbejde2.TabIndex = 1
         '
-        'Label2
+        'KraftArbejde2_Button_Clear
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(292, 113)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 17)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Fres = m * a"
+        Me.KraftArbejde2_Button_Clear.Location = New System.Drawing.Point(600, 247)
+        Me.KraftArbejde2_Button_Clear.Name = "KraftArbejde2_Button_Clear"
+        Me.KraftArbejde2_Button_Clear.Size = New System.Drawing.Size(129, 73)
+        Me.KraftArbejde2_Button_Clear.TabIndex = 9
+        Me.KraftArbejde2_Button_Clear.Text = "Clear"
+        Me.KraftArbejde2_Button_Clear.UseVisualStyleBackColor = True
+        '
+        'KraftArbejde2_Label_Resultat
+        '
+        Me.KraftArbejde2_Label_Resultat.AutoSize = True
+        Me.KraftArbejde2_Label_Resultat.Location = New System.Drawing.Point(298, 233)
+        Me.KraftArbejde2_Label_Resultat.Name = "KraftArbejde2_Label_Resultat"
+        Me.KraftArbejde2_Label_Resultat.Size = New System.Drawing.Size(0, 17)
+        Me.KraftArbejde2_Label_Resultat.TabIndex = 8
+        '
+        'KraftArbejde2_Label_Fres
+        '
+        Me.KraftArbejde2_Label_Fres.AutoSize = True
+        Me.KraftArbejde2_Label_Fres.Location = New System.Drawing.Point(42, 280)
+        Me.KraftArbejde2_Label_Fres.Name = "KraftArbejde2_Label_Fres"
+        Me.KraftArbejde2_Label_Fres.Size = New System.Drawing.Size(36, 17)
+        Me.KraftArbejde2_Label_Fres.TabIndex = 7
+        Me.KraftArbejde2_Label_Fres.Text = "Fres"
+        '
+        'KraftArbejde2_Label_a
+        '
+        Me.KraftArbejde2_Label_a.AutoSize = True
+        Me.KraftArbejde2_Label_a.Location = New System.Drawing.Point(59, 233)
+        Me.KraftArbejde2_Label_a.Name = "KraftArbejde2_Label_a"
+        Me.KraftArbejde2_Label_a.Size = New System.Drawing.Size(16, 17)
+        Me.KraftArbejde2_Label_a.TabIndex = 6
+        Me.KraftArbejde2_Label_a.Text = "a"
+        '
+        'KraftArbejde2_Label_m
+        '
+        Me.KraftArbejde2_Label_m.AutoSize = True
+        Me.KraftArbejde2_Label_m.Location = New System.Drawing.Point(56, 182)
+        Me.KraftArbejde2_Label_m.Name = "KraftArbejde2_Label_m"
+        Me.KraftArbejde2_Label_m.Size = New System.Drawing.Size(19, 17)
+        Me.KraftArbejde2_Label_m.TabIndex = 5
+        Me.KraftArbejde2_Label_m.Text = "m"
+        '
+        'KraftArbejde2_Textbox_Fres
+        '
+        Me.KraftArbejde2_Textbox_Fres.Location = New System.Drawing.Point(84, 277)
+        Me.KraftArbejde2_Textbox_Fres.Name = "KraftArbejde2_Textbox_Fres"
+        Me.KraftArbejde2_Textbox_Fres.Size = New System.Drawing.Size(100, 22)
+        Me.KraftArbejde2_Textbox_Fres.TabIndex = 4
+        '
+        'KraftArbejde2_Textbox_a
+        '
+        Me.KraftArbejde2_Textbox_a.Location = New System.Drawing.Point(84, 228)
+        Me.KraftArbejde2_Textbox_a.Name = "KraftArbejde2_Textbox_a"
+        Me.KraftArbejde2_Textbox_a.Size = New System.Drawing.Size(100, 22)
+        Me.KraftArbejde2_Textbox_a.TabIndex = 3
+        '
+        'KraftArbejde2_Textbox_m
+        '
+        Me.KraftArbejde2_Textbox_m.Location = New System.Drawing.Point(84, 179)
+        Me.KraftArbejde2_Textbox_m.Name = "KraftArbejde2_Textbox_m"
+        Me.KraftArbejde2_Textbox_m.Size = New System.Drawing.Size(100, 22)
+        Me.KraftArbejde2_Textbox_m.TabIndex = 2
+        '
+        'KraftArbejde2_Button_Beregn
+        '
+        Me.KraftArbejde2_Button_Beregn.Location = New System.Drawing.Point(600, 165)
+        Me.KraftArbejde2_Button_Beregn.Name = "KraftArbejde2_Button_Beregn"
+        Me.KraftArbejde2_Button_Beregn.Size = New System.Drawing.Size(129, 70)
+        Me.KraftArbejde2_Button_Beregn.TabIndex = 1
+        Me.KraftArbejde2_Button_Beregn.Text = "Beregn"
+        Me.KraftArbejde2_Button_Beregn.UseVisualStyleBackColor = True
+        '
+        'KraftArbejde2_Label_Formel
+        '
+        Me.KraftArbejde2_Label_Formel.AutoSize = True
+        Me.KraftArbejde2_Label_Formel.Location = New System.Drawing.Point(313, 96)
+        Me.KraftArbejde2_Label_Formel.Name = "KraftArbejde2_Label_Formel"
+        Me.KraftArbejde2_Label_Formel.Size = New System.Drawing.Size(84, 17)
+        Me.KraftArbejde2_Label_Formel.TabIndex = 0
+        Me.KraftArbejde2_Label_Formel.Text = "m * a = Fres"
         '
         'Panel_EnergiVarme
         '
         Me.Panel_EnergiVarme.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel_EnergiVarme.Controls.Add(Me.Label3)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Button_Clear)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Label_C)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Label_T)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Label_Q)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Textbox_Q)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Textbox_T)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Textbox_C)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Label_Resultat)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Button_Beregn)
+        Me.Panel_EnergiVarme.Controls.Add(Me.EnergiVarme1_Label_Formel)
         Me.Panel_EnergiVarme.Location = New System.Drawing.Point(0, -1)
         Me.Panel_EnergiVarme.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_EnergiVarme.Name = "Panel_EnergiVarme"
         Me.Panel_EnergiVarme.Size = New System.Drawing.Size(795, 501)
         Me.Panel_EnergiVarme.TabIndex = 4
         '
-        'Label3
+        'EnergiVarme1_Button_Clear
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(223, 169)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 17)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Q = C * ∆T"
+        Me.EnergiVarme1_Button_Clear.Location = New System.Drawing.Point(575, 251)
+        Me.EnergiVarme1_Button_Clear.Name = "EnergiVarme1_Button_Clear"
+        Me.EnergiVarme1_Button_Clear.Size = New System.Drawing.Size(131, 77)
+        Me.EnergiVarme1_Button_Clear.TabIndex = 9
+        Me.EnergiVarme1_Button_Clear.Text = "Clear"
+        Me.EnergiVarme1_Button_Clear.UseVisualStyleBackColor = True
+        '
+        'EnergiVarme1_Label_C
+        '
+        Me.EnergiVarme1_Label_C.AutoSize = True
+        Me.EnergiVarme1_Label_C.Location = New System.Drawing.Point(59, 186)
+        Me.EnergiVarme1_Label_C.Name = "EnergiVarme1_Label_C"
+        Me.EnergiVarme1_Label_C.Size = New System.Drawing.Size(17, 17)
+        Me.EnergiVarme1_Label_C.TabIndex = 8
+        Me.EnergiVarme1_Label_C.Text = "C"
+        '
+        'EnergiVarme1_Label_T
+        '
+        Me.EnergiVarme1_Label_T.AutoSize = True
+        Me.EnergiVarme1_Label_T.Location = New System.Drawing.Point(59, 234)
+        Me.EnergiVarme1_Label_T.Name = "EnergiVarme1_Label_T"
+        Me.EnergiVarme1_Label_T.Size = New System.Drawing.Size(17, 17)
+        Me.EnergiVarme1_Label_T.TabIndex = 7
+        Me.EnergiVarme1_Label_T.Text = "T"
+        '
+        'EnergiVarme1_Label_Q
+        '
+        Me.EnergiVarme1_Label_Q.AutoSize = True
+        Me.EnergiVarme1_Label_Q.Location = New System.Drawing.Point(57, 278)
+        Me.EnergiVarme1_Label_Q.Name = "EnergiVarme1_Label_Q"
+        Me.EnergiVarme1_Label_Q.Size = New System.Drawing.Size(19, 17)
+        Me.EnergiVarme1_Label_Q.TabIndex = 6
+        Me.EnergiVarme1_Label_Q.Text = "Q"
+        '
+        'EnergiVarme1_Textbox_Q
+        '
+        Me.EnergiVarme1_Textbox_Q.Location = New System.Drawing.Point(94, 276)
+        Me.EnergiVarme1_Textbox_Q.Name = "EnergiVarme1_Textbox_Q"
+        Me.EnergiVarme1_Textbox_Q.Size = New System.Drawing.Size(100, 22)
+        Me.EnergiVarme1_Textbox_Q.TabIndex = 5
+        '
+        'EnergiVarme1_Textbox_T
+        '
+        Me.EnergiVarme1_Textbox_T.Location = New System.Drawing.Point(94, 231)
+        Me.EnergiVarme1_Textbox_T.Name = "EnergiVarme1_Textbox_T"
+        Me.EnergiVarme1_Textbox_T.Size = New System.Drawing.Size(100, 22)
+        Me.EnergiVarme1_Textbox_T.TabIndex = 4
+        '
+        'EnergiVarme1_Textbox_C
+        '
+        Me.EnergiVarme1_Textbox_C.Location = New System.Drawing.Point(94, 183)
+        Me.EnergiVarme1_Textbox_C.Name = "EnergiVarme1_Textbox_C"
+        Me.EnergiVarme1_Textbox_C.Size = New System.Drawing.Size(100, 22)
+        Me.EnergiVarme1_Textbox_C.TabIndex = 3
+        '
+        'EnergiVarme1_Label_Resultat
+        '
+        Me.EnergiVarme1_Label_Resultat.AutoSize = True
+        Me.EnergiVarme1_Label_Resultat.Location = New System.Drawing.Point(304, 242)
+        Me.EnergiVarme1_Label_Resultat.Name = "EnergiVarme1_Label_Resultat"
+        Me.EnergiVarme1_Label_Resultat.Size = New System.Drawing.Size(0, 17)
+        Me.EnergiVarme1_Label_Resultat.TabIndex = 2
+        '
+        'EnergiVarme1_Button_Beregn
+        '
+        Me.EnergiVarme1_Button_Beregn.Location = New System.Drawing.Point(575, 155)
+        Me.EnergiVarme1_Button_Beregn.Name = "EnergiVarme1_Button_Beregn"
+        Me.EnergiVarme1_Button_Beregn.Size = New System.Drawing.Size(131, 79)
+        Me.EnergiVarme1_Button_Beregn.TabIndex = 1
+        Me.EnergiVarme1_Button_Beregn.Text = "Beregn"
+        Me.EnergiVarme1_Button_Beregn.UseVisualStyleBackColor = True
+        '
+        'EnergiVarme1_Label_Formel
+        '
+        Me.EnergiVarme1_Label_Formel.AutoSize = True
+        Me.EnergiVarme1_Label_Formel.Location = New System.Drawing.Point(355, 80)
+        Me.EnergiVarme1_Label_Formel.Name = "EnergiVarme1_Label_Formel"
+        Me.EnergiVarme1_Label_Formel.Size = New System.Drawing.Size(75, 17)
+        Me.EnergiVarme1_Label_Formel.TabIndex = 0
+        Me.EnergiVarme1_Label_Formel.Text = "Q = C * ∆T"
         '
         'Panel_ElektricitetMagnatisme
         '
@@ -319,25 +501,16 @@ Partial Class Form1
         Me.KraftArbejde1_ImageList.Images.SetKeyName(0, "3_-_Basic_UI_Glyph_Black-4-512.png")
         Me.KraftArbejde1_ImageList.Images.SetKeyName(1, "free-png-plus-sign-plus-icon-512.png")
         '
-        'KraftArbejde2_Button_Beregn
-        '
-        Me.KraftArbejde2_Button_Beregn.Location = New System.Drawing.Point(611, 228)
-        Me.KraftArbejde2_Button_Beregn.Name = "KraftArbejde2_Button_Beregn"
-        Me.KraftArbejde2_Button_Beregn.Size = New System.Drawing.Size(120, 56)
-        Me.KraftArbejde2_Button_Beregn.TabIndex = 1
-        Me.KraftArbejde2_Button_Beregn.Text = "Beregn"
-        Me.KraftArbejde2_Button_Beregn.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(795, 500)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Panel_KarftArbejde2)
         Me.Controls.Add(Me.Panel_start)
-        Me.Controls.Add(Me.Panel_KraftArbejde1)
         Me.Controls.Add(Me.Panel_EnergiVarme)
+        Me.Controls.Add(Me.Panel_KraftArbejde2)
+        Me.Controls.Add(Me.Panel_KraftArbejde1)
         Me.Controls.Add(Me.Panel_ElektricitetMagnatisme)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -348,8 +521,8 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.Panel_KraftArbejde1.ResumeLayout(False)
         Me.Panel_KraftArbejde1.PerformLayout()
-        Me.Panel_KarftArbejde2.ResumeLayout(False)
-        Me.Panel_KarftArbejde2.PerformLayout()
+        Me.Panel_KraftArbejde2.ResumeLayout(False)
+        Me.Panel_KraftArbejde2.PerformLayout()
         Me.Panel_EnergiVarme.ResumeLayout(False)
         Me.Panel_EnergiVarme.PerformLayout()
         Me.Panel_ElektricitetMagnatisme.ResumeLayout(False)
@@ -367,15 +540,15 @@ Partial Class Form1
     Friend WithEvents EnergiVarmeToolStrip As ToolStripMenuItem
     Friend WithEvents KraftArbejde2_ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KraftArbejde1_ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents QCToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Panel_KarftArbejde2 As Panel
+    Friend WithEvents EnergiVarme1_ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Panel_KraftArbejde2 As Panel
     Friend WithEvents Panel_EnergiVarme As Panel
     Friend WithEvents ElektricitetMagnatismeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OhmsLovToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ElekticitetMagnatisme_ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel_ElektricitetMagnatisme As Panel
     Friend WithEvents KraftArbejde1_Label_Formel As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents KraftArbejde2_Label_Formel As Label
+    Friend WithEvents EnergiVarme1_Label_Formel As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents KraftArbejde1_Textbox_Fres As TextBox
     Friend WithEvents KraftArbejde1_Textbox_F2 As TextBox
@@ -388,4 +561,21 @@ Partial Class Form1
     Friend WithEvents KraftArbejde1_Label_F1 As Label
     Friend WithEvents KraftArbejde1_Button_Clear As Button
     Friend WithEvents KraftArbejde2_Button_Beregn As Button
+    Friend WithEvents KraftArbejde2_Textbox_Fres As TextBox
+    Friend WithEvents KraftArbejde2_Textbox_a As TextBox
+    Friend WithEvents KraftArbejde2_Textbox_m As TextBox
+    Friend WithEvents KraftArbejde2_Label_m As Label
+    Friend WithEvents KraftArbejde2_Label_Fres As Label
+    Friend WithEvents KraftArbejde2_Label_a As Label
+    Friend WithEvents KraftArbejde2_Label_Resultat As Label
+    Friend WithEvents KraftArbejde2_Button_Clear As Button
+    Friend WithEvents EnergiVarme1_Label_C As Label
+    Friend WithEvents EnergiVarme1_Label_T As Label
+    Friend WithEvents EnergiVarme1_Label_Q As Label
+    Friend WithEvents EnergiVarme1_Textbox_Q As TextBox
+    Friend WithEvents EnergiVarme1_Textbox_T As TextBox
+    Friend WithEvents EnergiVarme1_Textbox_C As TextBox
+    Friend WithEvents EnergiVarme1_Label_Resultat As Label
+    Friend WithEvents EnergiVarme1_Button_Beregn As Button
+    Friend WithEvents EnergiVarme1_Button_Clear As Button
 End Class
