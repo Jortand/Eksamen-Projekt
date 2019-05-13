@@ -1,22 +1,142 @@
 ﻿Public Class Form1
     Dim FirstNumber As Decimal
-    Dim SencondNumber As Decimal
+    Dim SecondNumber As Decimal
     Dim Operations As Integer
-    Dim Operator_selector As Boolean = False
-
+    Dim Operator_select As Boolean = False
     Dim tal1, tal2, tal3 As Decimal
-
-    Private Sub Panel_start_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Lommeregner.Paint
-
-
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'SecondNumber = 1
     End Sub
-
     Private Sub LommeregnerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LommeregnerToolStripMenuItem.Click
         Panel_Lommeregner.Visible = True
         Panel_KraftArbejde1.Visible = False
         Panel_KraftArbejde2.Visible = False
         Panel_EnergiVarme1.Visible = False
         Panel_ElektricitetMagnatisme1.Visible = False
+    End Sub
+    Private Sub Lommeregner_0_Click(sender As Object, e As EventArgs) Handles Lommeregner_0.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "0"
+        End If
+    End Sub
+    Private Sub Lommeregner_1_Click(sender As Object, e As EventArgs) Handles Lommeregner_1.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "1"
+        Else
+            Lommeregner_Textbox.Text = "1"
+        End If
+    End Sub
+    Private Sub Lommeregner_2_Click(sender As Object, e As EventArgs) Handles Lommeregner_2.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "2"
+        Else
+            Lommeregner_Textbox.Text = "2"
+        End If
+    End Sub
+    Private Sub Lommeregner_3_Click(sender As Object, e As EventArgs) Handles Lommeregner_3.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "3"
+        Else
+            Lommeregner_Textbox.Text = "3"
+        End If
+    End Sub
+    Private Sub Lommeregner_4_Click(sender As Object, e As EventArgs) Handles Lommeregner_4.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "4"
+        Else
+            Lommeregner_Textbox.Text = "4"
+        End If
+    End Sub
+    Private Sub Lommeregner_5_Click(sender As Object, e As EventArgs) Handles Lommeregner_5.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "5"
+        Else
+            Lommeregner_Textbox.Text = "5"
+        End If
+    End Sub
+    Private Sub Lommeregner_6_Click(sender As Object, e As EventArgs) Handles Lommeregner_6.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "6"
+        Else
+            Lommeregner_Textbox.Text = "6"
+        End If
+    End Sub
+    Private Sub Lommeregner_7_Click(sender As Object, e As EventArgs) Handles Lommeregner_7.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "7"
+        Else
+            Lommeregner_Textbox.Text = "7"
+        End If
+    End Sub
+    Private Sub Lommeregner_8_Click(sender As Object, e As EventArgs) Handles Lommeregner_8.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "8"
+        Else
+            Lommeregner_Textbox.Text = "8"
+        End If
+    End Sub
+    Private Sub Lommeregner_9_Click(sender As Object, e As EventArgs) Handles Lommeregner_9.Click
+        If Lommeregner_Textbox.Text <> "0" Then
+            Lommeregner_Textbox.Text += "9"
+        Else
+            Lommeregner_Textbox.Text = "9"
+        End If
+    End Sub
+    Private Sub Lommeregner_point_Click(sender As Object, e As EventArgs) Handles Lommeregner_point.Click
+        If Not (Lommeregner_Textbox.Text.Contains(".")) Then
+            Lommeregner_Textbox.Text += "."
+        End If
+    End Sub
+    Private Sub Lommeregner_add_Click(sender As Object, e As EventArgs) Handles Lommeregner_add.Click
+        FirstNumber = Lommeregner_Textbox.Text
+        Lommeregner_Textbox.Text = "0"
+        Operator_select = True
+        Operations = 1
+    End Sub
+    Private Sub Lommeregner_minus_Click(sender As Object, e As EventArgs) Handles Lommeregner_minus.Click
+        FirstNumber = Lommeregner_Textbox.Text
+        Lommeregner_Textbox.Text = "0"
+        Operator_select = True
+        Operations = 2
+    End Sub
+    Private Sub Lommeregner_multi_Click(sender As Object, e As EventArgs) Handles Lommeregner_multi.Click
+        FirstNumber = Lommeregner_Textbox.Text
+        Lommeregner_Textbox.Text = "0"
+        Operator_select = True
+        Operations = 3
+    End Sub
+    Private Sub Lommeregner_divide_Click(sender As Object, e As EventArgs) Handles Lommeregner_divide.Click
+        FirstNumber = Lommeregner_Textbox.Text
+        Lommeregner_Textbox.Text = "0"
+        Operator_select = True
+        Operations = 4
+    End Sub
+    Private Sub Lommeregner_equal_Click(sender As Object, e As EventArgs) Handles Lommeregner_equal.Click
+        If Operator_select = True And Lommeregner_Textbox.Text > 0 Then
+            SecondNumber = Lommeregner_Textbox.Text
+            If Operations = 1 Then
+                Lommeregner_Textbox.Text = FirstNumber + SecondNumber
+            ElseIf Operations = 2 Then
+                Lommeregner_Textbox.Text = FirstNumber - SecondNumber
+            ElseIf Operations = 3 Then
+                Lommeregner_Textbox.Text = FirstNumber * SecondNumber
+            Else
+                If SecondNumber = 0 Then
+                    Lommeregner_Textbox.Text = "0"
+                Else
+                    Lommeregner_Textbox.Text = FirstNumber / SecondNumber
+                End If
+            End If
+            Operator_select = False
+        End If
+    End Sub
+    Private Sub Lommeregner_C_Click(sender As Object, e As EventArgs) Handles Lommeregner_C.Click
+        Operator_select = False
+        Lommeregner_Textbox.Text = "0"
+    End Sub
+    Private Sub Lommeregner_Procent_Click(sender As Object, e As EventArgs) Handles Lommeregner_Procent.Click
+        FirstNumber = Lommeregner_Textbox.Text
+        Lommeregner_Textbox.Text = FirstNumber / 100
     End Sub
 
     'Dette er for Fres = F1 + F2
@@ -173,5 +293,4 @@
         ElektricitetMagnatisme1_Textbox_U.Text = ""
         ElektricitetMagnatisme1_Label_Resultat.Text = ""
     End Sub
-
 End Class

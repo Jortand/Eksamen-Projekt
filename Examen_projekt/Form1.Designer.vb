@@ -24,23 +24,25 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Lommeregner_2 = New System.Windows.Forms.Button()
         Me.Panel_Lommeregner = New System.Windows.Forms.Panel()
+        Me.Lommeregner_Procent = New System.Windows.Forms.Button()
+        Me.Lommeregner_addorminus = New System.Windows.Forms.Button()
         Me.Lommeregner_Textbox = New System.Windows.Forms.TextBox()
-        Me.Lommeregner_equal = New System.Windows.Forms.Button()
-        Me.Lommeregner_divide = New System.Windows.Forms.Button()
-        Me.Lommeregner_C = New System.Windows.Forms.Button()
-        Me.Lommeregner_multi = New System.Windows.Forms.Button()
-        Me.Lommeregner_9 = New System.Windows.Forms.Button()
-        Me.Lommeregner_minus = New System.Windows.Forms.Button()
-        Me.Lommeregner_0 = New System.Windows.Forms.Button()
+        Me.Lommeregner_1 = New System.Windows.Forms.Button()
+        Me.Lommeregner_3 = New System.Windows.Forms.Button()
+        Me.Lommeregner_4 = New System.Windows.Forms.Button()
+        Me.Lommeregner_5 = New System.Windows.Forms.Button()
         Me.Lommeregner_6 = New System.Windows.Forms.Button()
         Me.Lommeregner_7 = New System.Windows.Forms.Button()
-        Me.Lommeregner_add = New System.Windows.Forms.Button()
-        Me.Lommeregner_point = New System.Windows.Forms.Button()
-        Me.Lommeregner_4 = New System.Windows.Forms.Button()
         Me.Lommeregner_8 = New System.Windows.Forms.Button()
-        Me.Lommeregner_3 = New System.Windows.Forms.Button()
-        Me.Lommeregner_5 = New System.Windows.Forms.Button()
-        Me.Lommeregner_1 = New System.Windows.Forms.Button()
+        Me.Lommeregner_9 = New System.Windows.Forms.Button()
+        Me.Lommeregner_0 = New System.Windows.Forms.Button()
+        Me.Lommeregner_add = New System.Windows.Forms.Button()
+        Me.Lommeregner_minus = New System.Windows.Forms.Button()
+        Me.Lommeregner_multi = New System.Windows.Forms.Button()
+        Me.Lommeregner_divide = New System.Windows.Forms.Button()
+        Me.Lommeregner_C = New System.Windows.Forms.Button()
+        Me.Lommeregner_point = New System.Windows.Forms.Button()
+        Me.Lommeregner_equal = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.LommeregnerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KraftArbejdeToolStrip = New System.Windows.Forms.ToolStripMenuItem()
@@ -109,7 +111,7 @@ Partial Class Form1
         'Lommeregner_2
         '
         Me.Lommeregner_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_2.Location = New System.Drawing.Point(178, 84)
+        Me.Lommeregner_2.Location = New System.Drawing.Point(177, 269)
         Me.Lommeregner_2.Name = "Lommeregner_2"
         Me.Lommeregner_2.Size = New System.Drawing.Size(60, 60)
         Me.Lommeregner_2.TabIndex = 2
@@ -118,6 +120,8 @@ Partial Class Form1
         '
         'Panel_Lommeregner
         '
+        Me.Panel_Lommeregner.Controls.Add(Me.Lommeregner_Procent)
+        Me.Panel_Lommeregner.Controls.Add(Me.Lommeregner_addorminus)
         Me.Panel_Lommeregner.Controls.Add(Me.Lommeregner_Textbox)
         Me.Panel_Lommeregner.Controls.Add(Me.Lommeregner_1)
         Me.Panel_Lommeregner.Controls.Add(Me.Lommeregner_2)
@@ -141,6 +145,26 @@ Partial Class Form1
         Me.Panel_Lommeregner.Size = New System.Drawing.Size(475, 403)
         Me.Panel_Lommeregner.TabIndex = 3
         '
+        'Lommeregner_Procent
+        '
+        Me.Lommeregner_Procent.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_Procent.Location = New System.Drawing.Point(244, 84)
+        Me.Lommeregner_Procent.Name = "Lommeregner_Procent"
+        Me.Lommeregner_Procent.Size = New System.Drawing.Size(59, 60)
+        Me.Lommeregner_Procent.TabIndex = 5
+        Me.Lommeregner_Procent.Text = "%"
+        Me.Lommeregner_Procent.UseVisualStyleBackColor = True
+        '
+        'Lommeregner_addorminus
+        '
+        Me.Lommeregner_addorminus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_addorminus.Location = New System.Drawing.Point(177, 84)
+        Me.Lommeregner_addorminus.Name = "Lommeregner_addorminus"
+        Me.Lommeregner_addorminus.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_addorminus.TabIndex = 4
+        Me.Lommeregner_addorminus.Text = "+/-"
+        Me.Lommeregner_addorminus.UseVisualStyleBackColor = True
+        '
         'Lommeregner_Textbox
         '
         Me.Lommeregner_Textbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -151,80 +175,50 @@ Partial Class Form1
         Me.Lommeregner_Textbox.Text = "0"
         Me.Lommeregner_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Lommeregner_equal
+        'Lommeregner_1
         '
-        Me.Lommeregner_equal.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_equal.Location = New System.Drawing.Point(111, 332)
-        Me.Lommeregner_equal.Name = "Lommeregner_equal"
-        Me.Lommeregner_equal.Size = New System.Drawing.Size(258, 60)
-        Me.Lommeregner_equal.TabIndex = 2
-        Me.Lommeregner_equal.Text = "="
-        Me.Lommeregner_equal.UseVisualStyleBackColor = True
+        Me.Lommeregner_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_1.Location = New System.Drawing.Point(111, 269)
+        Me.Lommeregner_1.Name = "Lommeregner_1"
+        Me.Lommeregner_1.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_1.TabIndex = 2
+        Me.Lommeregner_1.Text = "1"
+        Me.Lommeregner_1.UseVisualStyleBackColor = True
         '
-        'Lommeregner_divide
+        'Lommeregner_3
         '
-        Me.Lommeregner_divide.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_divide.Location = New System.Drawing.Point(307, 270)
-        Me.Lommeregner_divide.Name = "Lommeregner_divide"
-        Me.Lommeregner_divide.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_divide.TabIndex = 2
-        Me.Lommeregner_divide.Text = "/"
-        Me.Lommeregner_divide.UseVisualStyleBackColor = True
+        Me.Lommeregner_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_3.Location = New System.Drawing.Point(243, 269)
+        Me.Lommeregner_3.Name = "Lommeregner_3"
+        Me.Lommeregner_3.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_3.TabIndex = 2
+        Me.Lommeregner_3.Text = "3"
+        Me.Lommeregner_3.UseVisualStyleBackColor = True
         '
-        'Lommeregner_C
+        'Lommeregner_4
         '
-        Me.Lommeregner_C.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_C.Location = New System.Drawing.Point(242, 270)
-        Me.Lommeregner_C.Name = "Lommeregner_C"
-        Me.Lommeregner_C.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_C.TabIndex = 2
-        Me.Lommeregner_C.Text = "C"
-        Me.Lommeregner_C.UseVisualStyleBackColor = True
+        Me.Lommeregner_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_4.Location = New System.Drawing.Point(111, 207)
+        Me.Lommeregner_4.Name = "Lommeregner_4"
+        Me.Lommeregner_4.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_4.TabIndex = 2
+        Me.Lommeregner_4.Text = "4"
+        Me.Lommeregner_4.UseVisualStyleBackColor = True
         '
-        'Lommeregner_multi
+        'Lommeregner_5
         '
-        Me.Lommeregner_multi.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_multi.Location = New System.Drawing.Point(307, 208)
-        Me.Lommeregner_multi.Name = "Lommeregner_multi"
-        Me.Lommeregner_multi.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_multi.TabIndex = 2
-        Me.Lommeregner_multi.Text = "*"
-        Me.Lommeregner_multi.UseVisualStyleBackColor = True
-        '
-        'Lommeregner_9
-        '
-        Me.Lommeregner_9.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_9.Location = New System.Drawing.Point(242, 208)
-        Me.Lommeregner_9.Name = "Lommeregner_9"
-        Me.Lommeregner_9.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_9.TabIndex = 2
-        Me.Lommeregner_9.Text = "9"
-        Me.Lommeregner_9.UseVisualStyleBackColor = True
-        '
-        'Lommeregner_minus
-        '
-        Me.Lommeregner_minus.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_minus.Location = New System.Drawing.Point(307, 146)
-        Me.Lommeregner_minus.Name = "Lommeregner_minus"
-        Me.Lommeregner_minus.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_minus.TabIndex = 2
-        Me.Lommeregner_minus.Text = "-"
-        Me.Lommeregner_minus.UseVisualStyleBackColor = True
-        '
-        'Lommeregner_0
-        '
-        Me.Lommeregner_0.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_0.Location = New System.Drawing.Point(113, 270)
-        Me.Lommeregner_0.Name = "Lommeregner_0"
-        Me.Lommeregner_0.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_0.TabIndex = 2
-        Me.Lommeregner_0.Text = "0"
-        Me.Lommeregner_0.UseVisualStyleBackColor = True
+        Me.Lommeregner_5.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_5.Location = New System.Drawing.Point(177, 207)
+        Me.Lommeregner_5.Name = "Lommeregner_5"
+        Me.Lommeregner_5.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_5.TabIndex = 2
+        Me.Lommeregner_5.Text = "5"
+        Me.Lommeregner_5.UseVisualStyleBackColor = True
         '
         'Lommeregner_6
         '
         Me.Lommeregner_6.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_6.Location = New System.Drawing.Point(242, 146)
+        Me.Lommeregner_6.Location = New System.Drawing.Point(243, 207)
         Me.Lommeregner_6.Name = "Lommeregner_6"
         Me.Lommeregner_6.Size = New System.Drawing.Size(60, 60)
         Me.Lommeregner_6.TabIndex = 2
@@ -234,82 +228,112 @@ Partial Class Form1
         'Lommeregner_7
         '
         Me.Lommeregner_7.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_7.Location = New System.Drawing.Point(113, 208)
+        Me.Lommeregner_7.Location = New System.Drawing.Point(111, 146)
         Me.Lommeregner_7.Name = "Lommeregner_7"
         Me.Lommeregner_7.Size = New System.Drawing.Size(60, 60)
         Me.Lommeregner_7.TabIndex = 2
         Me.Lommeregner_7.Text = "7"
         Me.Lommeregner_7.UseVisualStyleBackColor = True
         '
-        'Lommeregner_add
-        '
-        Me.Lommeregner_add.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_add.Location = New System.Drawing.Point(307, 84)
-        Me.Lommeregner_add.Name = "Lommeregner_add"
-        Me.Lommeregner_add.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_add.TabIndex = 2
-        Me.Lommeregner_add.Text = "+"
-        Me.Lommeregner_add.UseVisualStyleBackColor = True
-        '
-        'Lommeregner_point
-        '
-        Me.Lommeregner_point.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_point.Location = New System.Drawing.Point(178, 270)
-        Me.Lommeregner_point.Name = "Lommeregner_point"
-        Me.Lommeregner_point.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_point.TabIndex = 2
-        Me.Lommeregner_point.Text = "."
-        Me.Lommeregner_point.UseVisualStyleBackColor = True
-        '
-        'Lommeregner_4
-        '
-        Me.Lommeregner_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_4.Location = New System.Drawing.Point(113, 146)
-        Me.Lommeregner_4.Name = "Lommeregner_4"
-        Me.Lommeregner_4.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_4.TabIndex = 2
-        Me.Lommeregner_4.Text = "4"
-        Me.Lommeregner_4.UseVisualStyleBackColor = True
-        '
         'Lommeregner_8
         '
         Me.Lommeregner_8.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_8.Location = New System.Drawing.Point(178, 208)
+        Me.Lommeregner_8.Location = New System.Drawing.Point(177, 145)
         Me.Lommeregner_8.Name = "Lommeregner_8"
         Me.Lommeregner_8.Size = New System.Drawing.Size(60, 60)
         Me.Lommeregner_8.TabIndex = 2
         Me.Lommeregner_8.Text = "8"
         Me.Lommeregner_8.UseVisualStyleBackColor = True
         '
-        'Lommeregner_3
+        'Lommeregner_9
         '
-        Me.Lommeregner_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_3.Location = New System.Drawing.Point(242, 84)
-        Me.Lommeregner_3.Name = "Lommeregner_3"
-        Me.Lommeregner_3.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_3.TabIndex = 2
-        Me.Lommeregner_3.Text = "3"
-        Me.Lommeregner_3.UseVisualStyleBackColor = True
+        Me.Lommeregner_9.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_9.Location = New System.Drawing.Point(243, 145)
+        Me.Lommeregner_9.Name = "Lommeregner_9"
+        Me.Lommeregner_9.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_9.TabIndex = 2
+        Me.Lommeregner_9.Text = "9"
+        Me.Lommeregner_9.UseVisualStyleBackColor = True
         '
-        'Lommeregner_5
+        'Lommeregner_0
         '
-        Me.Lommeregner_5.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_5.Location = New System.Drawing.Point(178, 146)
-        Me.Lommeregner_5.Name = "Lommeregner_5"
-        Me.Lommeregner_5.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_5.TabIndex = 2
-        Me.Lommeregner_5.Text = "5"
-        Me.Lommeregner_5.UseVisualStyleBackColor = True
+        Me.Lommeregner_0.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_0.Location = New System.Drawing.Point(111, 331)
+        Me.Lommeregner_0.Name = "Lommeregner_0"
+        Me.Lommeregner_0.Size = New System.Drawing.Size(126, 60)
+        Me.Lommeregner_0.TabIndex = 2
+        Me.Lommeregner_0.Text = "0"
+        Me.Lommeregner_0.UseVisualStyleBackColor = True
         '
-        'Lommeregner_1
+        'Lommeregner_add
         '
-        Me.Lommeregner_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lommeregner_1.Location = New System.Drawing.Point(113, 84)
-        Me.Lommeregner_1.Name = "Lommeregner_1"
-        Me.Lommeregner_1.Size = New System.Drawing.Size(60, 60)
-        Me.Lommeregner_1.TabIndex = 2
-        Me.Lommeregner_1.Text = "1"
-        Me.Lommeregner_1.UseVisualStyleBackColor = True
+        Me.Lommeregner_add.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_add.Location = New System.Drawing.Point(309, 269)
+        Me.Lommeregner_add.Name = "Lommeregner_add"
+        Me.Lommeregner_add.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_add.TabIndex = 2
+        Me.Lommeregner_add.Text = "+"
+        Me.Lommeregner_add.UseVisualStyleBackColor = True
+        '
+        'Lommeregner_minus
+        '
+        Me.Lommeregner_minus.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_minus.Location = New System.Drawing.Point(309, 207)
+        Me.Lommeregner_minus.Name = "Lommeregner_minus"
+        Me.Lommeregner_minus.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_minus.TabIndex = 2
+        Me.Lommeregner_minus.Text = "-"
+        Me.Lommeregner_minus.UseVisualStyleBackColor = True
+        '
+        'Lommeregner_multi
+        '
+        Me.Lommeregner_multi.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_multi.Location = New System.Drawing.Point(309, 145)
+        Me.Lommeregner_multi.Name = "Lommeregner_multi"
+        Me.Lommeregner_multi.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_multi.TabIndex = 2
+        Me.Lommeregner_multi.Text = "*"
+        Me.Lommeregner_multi.UseVisualStyleBackColor = True
+        '
+        'Lommeregner_divide
+        '
+        Me.Lommeregner_divide.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_divide.Location = New System.Drawing.Point(309, 84)
+        Me.Lommeregner_divide.Name = "Lommeregner_divide"
+        Me.Lommeregner_divide.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_divide.TabIndex = 2
+        Me.Lommeregner_divide.Text = "/"
+        Me.Lommeregner_divide.UseVisualStyleBackColor = True
+        '
+        'Lommeregner_C
+        '
+        Me.Lommeregner_C.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_C.Location = New System.Drawing.Point(111, 84)
+        Me.Lommeregner_C.Name = "Lommeregner_C"
+        Me.Lommeregner_C.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_C.TabIndex = 2
+        Me.Lommeregner_C.Text = "C"
+        Me.Lommeregner_C.UseVisualStyleBackColor = True
+        '
+        'Lommeregner_point
+        '
+        Me.Lommeregner_point.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_point.Location = New System.Drawing.Point(243, 331)
+        Me.Lommeregner_point.Name = "Lommeregner_point"
+        Me.Lommeregner_point.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_point.TabIndex = 2
+        Me.Lommeregner_point.Text = "."
+        Me.Lommeregner_point.UseVisualStyleBackColor = True
+        '
+        'Lommeregner_equal
+        '
+        Me.Lommeregner_equal.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lommeregner_equal.Location = New System.Drawing.Point(309, 331)
+        Me.Lommeregner_equal.Name = "Lommeregner_equal"
+        Me.Lommeregner_equal.Size = New System.Drawing.Size(60, 60)
+        Me.Lommeregner_equal.TabIndex = 2
+        Me.Lommeregner_equal.Text = "="
+        Me.Lommeregner_equal.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -351,7 +375,7 @@ Partial Class Form1
         '
         Me.EnergiVarmeToolStrip.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnergiVarme1_ToolStripMenuItem})
         Me.EnergiVarmeToolStrip.Name = "EnergiVarmeToolStrip"
-        Me.EnergiVarmeToolStrip.Size = New System.Drawing.Size(106, 20)
+        Me.EnergiVarmeToolStrip.Size = New System.Drawing.Size(105, 20)
         Me.EnergiVarmeToolStrip.Text = "Energi og Varme"
         '
         'EnergiVarme1_ToolStripMenuItem
@@ -959,4 +983,6 @@ Partial Class Form1
     Friend WithEvents Lommeregner_5 As Button
     Friend WithEvents Lommeregner_1 As Button
     Friend WithEvents Lommeregner_Textbox As TextBox
+    Friend WithEvents Lommeregner_Procent As Button
+    Friend WithEvents Lommeregner_addorminus As Button
 End Class
