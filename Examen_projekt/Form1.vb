@@ -1,24 +1,18 @@
 ﻿Public Class Form1
-    Dim tal As Integer
-    Dim resultat As Double
+    Dim FirstNumber As Decimal
+    Dim SencondNumber As Decimal
+    Dim Operations As Integer
+    Dim Operator_selector As Boolean = False
+
     Dim tal1, tal2, tal3 As Decimal
 
-    Private Sub New_Window_opener_Click(sender As Object, e As EventArgs)
-        TestForm.Show()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button9.Click, Button8.Click, Button7.Click, Button6.Click, Button5.Click, Button4.Click, Button3.Click, Button2.Click, Button17.Click, Button16.Click, Button15.Click, Button14.Click, Button13.Click, Button12.Click, Button11.Click, Button10.Click
-        Panel_KraftArbejde1.Visible = True
-        Panel_start.Visible = False
-    End Sub
-
-    Private Sub Panel_start_Paint(sender As Object, e As PaintEventArgs) Handles Panel_start.Paint
+    Private Sub Panel_start_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Lommeregner.Paint
 
 
     End Sub
 
     Private Sub LommeregnerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LommeregnerToolStripMenuItem.Click
-        Panel_start.Visible = True
+        Panel_Lommeregner.Visible = True
         Panel_KraftArbejde1.Visible = False
         Panel_KraftArbejde2.Visible = False
         Panel_EnergiVarme1.Visible = False
@@ -27,7 +21,7 @@
 
     'Dette er for Fres = F1 + F2
     Private Sub KraftArbejde1_ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KraftArbejde1_ToolStripMenuItem.Click
-        Panel_start.Visible = False
+        Panel_Lommeregner.Visible = False
         Panel_KraftArbejde1.Visible = True
         Panel_KraftArbejde2.Visible = False
         Panel_EnergiVarme1.Visible = False
@@ -67,7 +61,7 @@
 
     'Dette er for Fres = M * A
     Private Sub KraftArbejde2_ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KraftArbejde2_ToolStripMenuItem.Click
-        Panel_start.Visible = False
+        Panel_Lommeregner.Visible = False
         Panel_KraftArbejde1.Visible = False
         Panel_KraftArbejde2.Visible = True
         Panel_EnergiVarme1.Visible = False
@@ -106,7 +100,7 @@
 
     'Dette er for Q = C * ∆T
     Private Sub EnergiVarme1_ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnergiVarme1_ToolStripMenuItem.Click
-        Panel_start.Visible = False
+        Panel_Lommeregner.Visible = False
         Panel_KraftArbejde1.Visible = False
         Panel_KraftArbejde2.Visible = False
         Panel_EnergiVarme1.Visible = True
@@ -144,7 +138,7 @@
 
     'Dette er for U = R * I
     Private Sub ElekticitetMagnatisme1_ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ElektricitetMagnatisme1_ToolStripMenuItem.Click
-        Panel_start.Visible = False
+        Panel_Lommeregner.Visible = False
         Panel_KraftArbejde1.Visible = False
         Panel_KraftArbejde2.Visible = False
         Panel_EnergiVarme1.Visible = False
