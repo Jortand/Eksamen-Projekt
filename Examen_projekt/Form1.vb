@@ -181,13 +181,13 @@
         'Der bliver spurt om Textboxen ikke indeholder et - hvis dette er sandt bliver Textboxens indhold skrvet til Numb1.
         'Textboxen bliver så omskrevet til -numb1 for at få et - foran hvad der allerede stod i Textboxen.
         'hvis den første If er forkert bliver der spurt om Textboxen indeholder et - Hvis dette er sandt bliver Textboxens indhold skrevet til Numb1
-        'Textboxen bliver så omskrevet til Numb1 + Numb1 * Numb1 for at få det der allerede stod i Textboxen som var i minus til at være plus
+        'Textboxen bliver så omskrevet til -Numb1 for at få det der allerede stod i Textboxen som var i minus til at være plus da -- = +
         If Not Lommeregner_Textbox.Text.Contains("-") Then
             Numb1 = Lommeregner_Textbox.Text
             Lommeregner_Textbox.Text = -Numb1
         ElseIf Lommeregner_Textbox.Text.Contains("-") Then
             Numb1 = Lommeregner_Textbox.Text
-            Lommeregner_Textbox.Text = Numb1 + Numb1 * Numb1
+            Lommeregner_Textbox.Text = -Numb1
         End If
     End Sub
 
