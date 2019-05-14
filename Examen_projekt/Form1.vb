@@ -138,7 +138,10 @@
         FirstNumber = Lommeregner_Textbox.Text
         Lommeregner_Textbox.Text = FirstNumber / 100
     End Sub
-
+    Private Sub Lommeregner_addorminus_Click(sender As Object, e As EventArgs) Handles Lommeregner_addorminus.Click
+        FirstNumber = Lommeregner_Textbox.Text
+        Lommeregner_Textbox.Text = -FirstNumber
+    End Sub
     'Dette er for Fres = F1 + F2
     Private Sub KraftArbejde1_ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KraftArbejde1_ToolStripMenuItem.Click
         Panel_Lommeregner.Visible = False
