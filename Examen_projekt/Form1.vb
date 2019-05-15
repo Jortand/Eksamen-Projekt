@@ -22,14 +22,13 @@
     'Lommeregner starter her
     Private Sub Lommeregner_1_Click(sender As Object, e As EventArgs) Handles Lommeregner_1.Click
         'Denne Subrutine bliver brugt til at styre en tal knap på Lommeregneren
-        'denne If sætning spørger om der i Textboxen ikke står talet 0 hvis dette er sandt indsætter koden et 1 i Textboxen
-        'hvis der allerede er Tal i Textboxen vil det 1 blive sat bagerst 
-        'Hvis denne If er forkert skriver koden 1 i Textboxen
-        'Denne måde at skrive tal ind i Lommeregneren bliver brugt for alle tal fra 1 til 9 i dette program.
-        'talet 0 er anderledes i at der er blevet taget "Else" ud da der allerede står 0 til at starte med men virker på samme princip
         If Lommeregner_Textbox.Text <> "0" Then
+            'denne If sætning spørger om der i Textboxen ikke står talet 0 hvis dette er sandt indsætter koden et 1 i Textboxen
             Lommeregner_Textbox.Text += "1"
         Else
+            'Hvis denne If er forkert skriver koden 1 i Textboxen
+            'Denne måde at skrive tal ind i Lommeregneren bliver brugt for alle tal fra 1 til 9 i dette program.
+            'talet 0 er anderledes i at der er blevet taget "Else" ud da der allerede står 0 til at starte med men virker på samme princip
             Lommeregner_Textbox.Text = "1"
         End If
     End Sub
@@ -97,25 +96,25 @@
 
     Private Sub Lommeregner_point_Click(sender As Object, e As EventArgs) Handles Lommeregner_point.Click
         'Denne Subrutine er brugt til at indskrive et , i lommeregneren
-        'If Not sætningen spør om Textboxen allerede har et , hvis denne sættning er sand vil rutinen ikke gøre noget,
-        'Hvis denne sætning er falsk vil koden indsætte et , ind i Textboxen
-        'Vi bruger om Textboxen Contains et , fordi der kun kan være et , i en matematisk udregning så vi vil ikke have 
-        'at man skal kunne indskrive mere end en.
         If Not Lommeregner_Textbox.Text.Contains(",") Then
+            'If Not sætningen spør om Textboxen allerede har et , hvis denne sættning er sand vil rutinen ikke gøre noget,
+            'Hvis denne sætning er falsk vil koden indsætte et , ind i Textboxen
+            'Vi bruger om Textboxen Contains et , fordi der kun kan være et , i en matematisk udregning så vi vil ikke have 
+            'at man skal kunne indskrive mere end en.
             Lommeregner_Textbox.Text += ","
         End If
     End Sub
     Private Sub Lommeregner_add_Click(sender As Object, e As EventArgs) Handles Lommeregner_add.Click
         'Denne Subrutine er brugt til at + tal sammen
+        Numb1 = Lommeregner_Textbox.Text
         'Først skriver programmet det der står i Textboxen ind i Numb1 jeg bruger Numb1 som et sted at holde på talet indtil jeg skal bruge det igen.
+        Lommeregner_Textbox.Text = "0"
         'Herefter nulstilles Textboxen igen for at brugeren kan skrive nye tal ind
+        ActionMade = True
         'ActionMade bliver sat til True, jeg bruger denne Boolean for at checke længere nede i koden om et symbol som + - * eller / er bliver tykket
+        Action = 1
         'Action bliver sat til 1, jeg bruger integer Action for at bestemme imellem de forskellige symboler + har 1, - har 2 osv.
         'Denne måde at kode Symboler på bliver brugt til alle 4 symboler på Lommeregneren.
-        Numb1 = Lommeregner_Textbox.Text
-        Lommeregner_Textbox.Text = "0"
-        ActionMade = True
-        Action = 1
     End Sub
     Private Sub Lommeregner_minus_Click(sender As Object, e As EventArgs) Handles Lommeregner_minus.Click
         Numb1 = Lommeregner_Textbox.Text
@@ -138,14 +137,12 @@
     Private Sub Lommeregner_equal_Click(sender As Object, e As EventArgs) Handles Lommeregner_equal.Click
         'Denne Subrutine er for når = bliver trykket
         'Der bliver først spurt om ActionMade = True dette kan kun være True hvis et Symbol er bliver trykket før,
-        'der bliver spurt om det som står i Textboxen er over 0, dette er for at fixe en bug med at dividere med 0 som ville så Programmet til at crashe.
-        'Programmet skriver det tal som står i Textboxen over til Numb2 da Numb1 allerede er optaget af det tal som var før brugeren trykkede på et symbol
-        'Herefter går Programmet igennem Action og spør hvad for et tal der matcher for at vide hvad for et symbol Brugeren har trykket
-        'Resultatet af denne udregning bliver skrevet i Textboxen
-        'Ved Dividere har det været nødventigt at lave et extra check for at Numb2 ikke bliver 0 da man ikke kan dividere med 0
-        'Til sidste bliver ActionMade lavet til False for at = ikke kan blive trykket flere gange i træk uden at Brugeren trykket et nyt symbol.
+        'der bliver også spurt om det der står i Textboxen er over 0, dette er for at fixe en bug med at dividere med 0 som ville så Programmet til at crashe.
         If ActionMade = True And Lommeregner_Textbox.Text > 0 Then
+            'Programmet skriver det tal som står i Textboxen over til Numb2, da Numb1 allerede er optaget af det tal som var før brugeren trykkede på et symbol.
             Numb2 = Lommeregner_Textbox.Text
+            'Herefter går Programmet igennem Action og spør hvad for et tal der matcher for at vide hvad for et symbol Brugeren har trykket
+            'Resultatet af denne udregning bliver skrevet i Textboxen
             If Action = 1 Then
                 Lommeregner_Textbox.Text = Numb1 + Numb2
             ElseIf Action = 2 Then
@@ -153,12 +150,14 @@
             ElseIf Action = 3 Then
                 Lommeregner_Textbox.Text = Numb1 * Numb2
             Else
+                'Ved Dividere har det været nødventigt at lave et extra check for at Numb2 ikke bliver 0 da man ikke kan dividere med 0
                 If Numb2 = 0 Then
                     Lommeregner_Textbox.Text = "0"
                 Else
                     Lommeregner_Textbox.Text = Numb1 / Numb2
                 End If
             End If
+            'Til sidste bliver ActionMade lavet til False for at = ikke kan blive trykket flere gange i træk uden at Brugeren trykket et nyt symbol.
             ActionMade = False
         End If
     End Sub
@@ -178,14 +177,14 @@
     End Sub
     Private Sub Lommeregner_addorminus_Click(sender As Object, e As EventArgs) Handles Lommeregner_addorminus.Click
         'Denne kode er for at få et tal til at gå fra minus til plus og omvent.
-        'Der bliver spurt om Textboxen ikke indeholder et - hvis dette er sandt bliver Textboxens indhold skrvet til Numb1.
-        'Textboxen bliver så omskrevet til -numb1 for at få et - foran hvad der allerede stod i Textboxen.
-        'hvis den første If er forkert bliver der spurt om Textboxen indeholder et - Hvis dette er sandt bliver Textboxens indhold skrevet til Numb1
-        'Textboxen bliver så omskrevet til -Numb1 for at få det der allerede stod i Textboxen som var i minus til at være plus da -- = +
         If Not Lommeregner_Textbox.Text.Contains("-") Then
+            'Der bliver spurt om Textboxen ikke indeholder et - hvis dette er sandt bliver Textboxens indhold skrvet til Numb1.
+            'Textboxen bliver så omskrevet til -numb1 for at få et - foran hvad der allerede stod i Textboxen.
             Numb1 = Lommeregner_Textbox.Text
             Lommeregner_Textbox.Text = -Numb1
         ElseIf Lommeregner_Textbox.Text.Contains("-") Then
+            'hvis den første If er forkert bliver der spurt om Textboxen indeholder et - Hvis dette er sandt bliver Textboxens indhold skrevet til Numb1
+            'Textboxen bliver så omskrevet til -Numb1 for at få det der allerede stod i Textboxen som var i minus til at være plus da -- = +
             Numb1 = Lommeregner_Textbox.Text
             Lommeregner_Textbox.Text = -Numb1
         End If
