@@ -198,28 +198,40 @@
         Panel_KraftArbejde2.Visible = False
         Panel_EnergiVarme1.Visible = False
         Panel_ElektricitetMagnatisme1.Visible = False
+        'Fra linje 146 til linje 151, da registreres der et klik i en menu, denne værende KraftArbejde1. Dette klik fører derefter
+        '-til at der ikke vises samtlige paneler, men kun det panel man har klikket i menuen. Dette gælder for samtlige menuer
+        '-men bliver kun vist for det relevante man har klikket på.
     End Sub
     Private Sub KraftArbejde1_Button_Beregn_Click(sender As Object, e As EventArgs) Handles KraftArbejde1_Button_Beregn.Click
+        'Der klikkes på beregn-knappen, denne udfører én af følgende hadlinger:
         If Len(KraftArbejde1_Textbox_Fres.Text) < 1 And Len(KraftArbejde1_Textbox_F1.Text) > 0 And Len(KraftArbejde1_Textbox_F1.Text) > 0 Then
             tal1 = CDec(KraftArbejde1_Textbox_F1.Text)
             tal2 = CDec(KraftArbejde1_Textbox_F2.Text)
             tal3 = tal1 + tal2
-            KraftArbejde1_Textbox_Fres.Text = tal3
+            'Der køres en if-statement, hvor der "spørges" om textbox1 og textbox2 er af en string-værdi. Denne kan-
+            'være tom (empty), null og ellers alle tal (også decimaler) i et meget stort interval.
             KraftArbejde1_Label_Resultat.Text = "Fres er " & Format(tal3, "0.00")
+            'Er både textbox1 og textbox2 givet en værdi, da vil den adderede værdi blive vist. Denne har jeg valgt
+            '-at formatere idet der kan vises mange decimaler, men jeg har valgt at formatere til 2 betydende cifre.
         ElseIf Len(KraftArbejde1_Textbox_F2.Text) < 1 And Len(KraftArbejde1_Textbox_F1.Text) > 0 And Len(KraftArbejde1_Textbox_Fres.Text) > 0 Then
             tal1 = CDec(KraftArbejde1_Textbox_F1.Text)
             tal3 = CDec(KraftArbejde1_Textbox_Fres.Text)
             tal2 = tal1 - tal3
-            KraftArbejde1_Textbox_F2.Text = tal2
+            'Samme princip gør sig gældende som i ovenstående. Dog bliver der spurgt i if-statement, om "hvis textbox2<1 og
+            'textbox1>0 & textbox.fres>0", hvis dette er tilfældet bliver textbox1 subtraheret fra textbox.fres.
             KraftArbejde1_Label_Resultat.Text = "F2 er " & Format(tal2, "0.00")
+            'Er både textbox1 og textbox.fres givet en værdi, da vil den subtraherede værdi blive vist. Denne har jeg valgt
+            '-at formatere idet der kan vises mange decimaler, men jeg har valgt at formatere til 2 betydende cifre.
         ElseIf Len(KraftArbejde1_Textbox_F1.Text) < 1 And Len(KraftArbejde1_Textbox_Fres.Text) > 0 And Len(KraftArbejde1_Textbox_F2.Text) > 0 Then
             tal2 = CDec(KraftArbejde1_Textbox_F2.Text)
             tal3 = CDec(KraftArbejde1_Textbox_Fres.Text)
             tal1 = tal3 - tal2
-            KraftArbejde1_Textbox_F1.Text = tal1
+            'Samme princip gør sig gældende som i ovenstående. Dog bliver der spurgt i if-statement, om "hvis textbox2>0 og
+            'textbox.Fres>0", hvis dette er tilfældet bliver textbox2 subtraheret fra textbox.fres.
             KraftArbejde1_Label_Resultat.Text = "F1 er " & Format(tal1, "0.00")
+            'Er både textbox2 og textbox.fres givet en værdi, da vil den adderede værdi blive vist. Denne har jeg valgt
+            '-at formatere idet der kan vises mange decimaler, men jeg har valgt at formatere til 2 betydende cifre.
         End If
-
         tal1 = 0
         tal2 = 0
         tal3 = 0
